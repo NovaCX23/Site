@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillVault - Grow your skills to advance in your career.">
     <title>SkillVault</title>
     <link rel="stylesheet" href="./CSS/style.css">
     
@@ -13,20 +14,23 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+    <script src="./script.js"></script>
+
 </head>
 <body>
     <!--================= NAVBAR ===================-->
     <nav>
        <div class="container nav__container">
-        <a href="home.html"><h4>SKILL VAULT</h4></a>
+        <a href="home.html"><h4>SkillVault</h4></a>
         <ul class="nav__menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button id=""open-menu-btn><i class="uil uil-bars"></i></button>
-        <button id=""close-menu-btn><i class="uil uil-multiply"></i></button>
+        <button id="open-menu-btn" aria-label="Open menu"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn" aria-label="Close menu"><i class="uil uil-multiply"></i></button>              
+
     </div>
     </nav>
 
@@ -35,21 +39,74 @@
 
 
     <header>
-        <div class="conatiner header__container">
+        <div class="container header__container">
             <div class="header__left">
-                <h1>Grow your skills to advance in your career path
-                </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <h1>Grow your skills to advance in your career path</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam doloribus iste soluta fuga recusandae explicabo voluptates nesciunt sequi culpa molestias?
+
                 </p>
-                <a href="course.html" class="btn btn-primary">Get Started</a>
+                <a href="courses.html" class="btn btn-primary">Get Started</a>
             </div>
             <div class="header__right">
-                <div class="header__right-image">
-                    <img src="header.png">
+                <div class="header__right-image" alt="Header Image Description">
+                    <img src="./images/header.jpg">
                 </div>
             </div>
         </div>
     </header>
-    <!--=================END OF HEADER ====================-->
+    <!--================= END OF HEADER ====================-->
+
+    <!--================= CATEGORIES ====================-->
+
+    <section class="categories">
+        <div class="container categories__container">
+            <div class="categories__left">
+                <h1>Categories</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis eum temporibus recusandae ex. In, voluptate error fuga, iste omnis mollitia animi ipsa hic reprehenderit deleniti illum laborum adipisci quis.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="categories__right">
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-bitcoin-circle"></i></span>
+                    <h5>Blockchain</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequuntur?</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-laptop"></i></span>
+                    <h5>Graphic Design</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequuntur?</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-usd-circle"></i></span>
+                    <h5>Finance</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequuntur?</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-megaphone"></i></span>
+                    <h5>Marketing</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequuntur?</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-music"></i></span>
+                    <h5>Music</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequuntur?</p>
+                </article>
+
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-puzzle-piece"></i></span>
+                    <h5>Business</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, consequuntur?</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--================= END OF CATEGORIES ====================-->
+
+
 </body>
 </html>
