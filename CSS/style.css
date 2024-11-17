@@ -108,6 +108,8 @@ img {
     color: var(--color-white);
 }
 
+/* ======================= NAVBAR ==================== */
+
 nav {
     background: transparent;
     width: 100vw;
@@ -115,6 +117,12 @@ nav {
     position: fixed;
     top: 0;
     z-index: 11;
+}
+
+/* navbar change using js*/ 
+.window-scroll{
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2)
 }
 
 .nav__container {
@@ -180,6 +188,9 @@ nav button {
     }
 }
 
+/* ======================= END OF NAVBAR ==================== */
+
+/* ======================= HEADER ==================== */
 header {
     position: relative;
     top: 5rem;
@@ -206,6 +217,8 @@ header {
         gap: 2rem;
     }
 }
+
+/* ======================= END OF HEADER ==================== */
 
 
 /* =================== CATEGORIES =================== */
@@ -278,3 +291,5 @@ header {
 .category p{
     font-size:0.85rem;
 }
+
+/* =================== END OF CATEGORIES =================== */
