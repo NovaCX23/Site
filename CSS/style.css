@@ -225,71 +225,116 @@ header {
 
 .categories {
     background: var(--color-bg1);
-    height:29rem;
+    padding: 4rem 0; /* Added padding for better spacing on all screen sizes */
 }
 
-.categories h1{
-    line-height:1;
-    margin-bottom:3rem;
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
+    font-size: 2rem; /* Ensure font size adjusts for responsiveness */
 }
 
-.categories__container{
-    display:grid;
-    grid-template-columns:40% 60%;
-}
-
-.categories__left{
-    margin-right:4rem;
-}
-
-.categories__left p{
-    margin: 1rem 0 3rem;
-}
-.categories__right{
+.categories__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2rem;
+    grid-template-columns: 40% 60%; /* Default two-column layout */
+    gap: 2rem; /* Added spacing between left and right sections */
 }
 
-.category{
+.categories__left {
+    margin-right: 4rem;
+}
+
+.categories__left p {
+    margin: 1rem 0 3rem;
+    font-size: 1rem; /* Adjust font size for better readability */
+}
+
+.categories__right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid for responsiveness */
+    gap: 1.2rem; /* Spacing between category cards */
+}
+
+.category {
     background: var(--color-bg2);
-    padding:2rem;
-    border-radius:2rem;
+    padding: 2rem;
+    border-radius: 2rem;
     transition: var(--transition);
+    text-align: center; /* Ensures consistent alignment */
 }
 
-.category:hover{
-    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
-    z-index:1;
+.category:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transform: scale(1.05); /* Add subtle scaling on hover */
 }
 
-.category:nth-child(2) .category__icon{
-    background: var(--color-danger)
+.category:nth-child(2) .category__icon {
+    background: var(--color-danger);
 }
 
-.category:nth-child(3) .category__icon{
-    background: var(--color-success)
+.category:nth-child(3) .category__icon {
+    background: var(--color-success);
 }
 
-.category:nth-child(4) .category__icon{
-    background: var(--color-warning)
+.category:nth-child(4) .category__icon {
+    background: var(--color-warning);
 }
 
-.category:nth-child(5) .category__icon{
-    background: var(--color-success)
+.category:nth-child(5) .category__icon {
+    background: var(--color-success);
 }
 
-.category__icon{
+.category__icon {
     background: var(--color-primary);
-    padding:0.7rem;
+    padding: 0.7rem;
     border-radius: 0.9rem;
-}
-.category h5{
-    margin: 3rem 0 1rem;
+    margin-bottom: 1rem; /* Add spacing between icon and title */
 }
 
-.category p{
-    font-size:0.85rem;
+.category h5 {
+    margin: 1.5rem 0 1rem; /* Adjust margins for better spacing */
+    font-size: 1.2rem;
+}
+
+.category p {
+    font-size: 0.9rem; /* Slightly increased font size for readability */
+    color: var(--color-light);
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+    .categories__container {
+        grid-template-columns: 1fr; /* Switch to single-column layout */
+        gap: 2rem;
+    }
+
+    .categories__left {
+        text-align: center; /* Center-align text for smaller screens */
+        margin: 0 auto;
+    }
+
+    .categories__left p {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .categories__right {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+        gap: 1rem;
+    }
+
+    .category {
+        padding: 1.5rem; /* Adjust padding for smaller cards */
+    }
+
+    .category h5 {
+        font-size: 1rem; /* Adjust heading size for smaller screens */
+    }
+
+    .category p {
+        font-size: 0.8rem; /* Adjust paragraph size */
+    }
 }
 
 /* =================== END OF CATEGORIES =================== */
