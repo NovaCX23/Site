@@ -225,9 +225,9 @@ header {
 
 .categories {
     background: var(--color-bg1);
-   /* padding: 2rem 0; */
-    height: 32rem;
-     /* Added padding for better spacing on all screen sizes */
+    padding: 2rem 0;
+    /*height: 32rem;*/
+    /* Added padding for better spacing on all screen sizes */
 }
 
 .categories h1 {
@@ -539,3 +539,6 @@ footer ul li a:hover{
 
 
 /* ================= END OF FOOTER  ==================== */
+
+/* ================= MEDIA QUERIES TAB ==================== */
+
