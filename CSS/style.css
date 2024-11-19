@@ -225,7 +225,9 @@ header {
 
 .categories {
     background: var(--color-bg1);
-    padding: 4rem 0; /* Added padding for better spacing on all screen sizes */
+   /* padding: 2rem 0; */
+    height: 32rem;
+     /* Added padding for better spacing on all screen sizes */
 }
 
 .categories h1 {
@@ -500,8 +502,40 @@ header {
 
 /* ================= FOOTER  ==================== */
 
+footer{
+    background: var(--color-bg1);
+    padding-top:5rem;
+    font-size:0.9rem;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer__container > div h4{
+    margin-bottom: 1.2rem;
+}
+
+.footer__1 p{
+    margin: 0 0 2rem;
+}
+
+footer ul li{
+    margin-bottom:  0.7rem;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
 
 
+.footer__socials{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
 
 
 /* ================= END OF FOOTER  ==================== */
