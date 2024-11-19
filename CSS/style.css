@@ -446,47 +446,72 @@ header {
 
 /* ================= TESTIMONIALS  ==================== */
 
-.testimonials__container{
+.testimonials__container {
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
+    display: grid; /* Use grid for better alignment and spacing */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 2rem; /* Add spacing between testimonials */
 }
 
-.testimonials{
-    padding-top: 2rem;
+.testimonial {
+    margin-bottom: 2rem; /* Optional: Add additional spacing if needed */
 }
 
-.avatar{
+.avatar {
     width: 6rem;
     height: 6rem;
-    border-radius: 58%;
+    border-radius: 50%; /* Circular shape */
     overflow: hidden;
-    margin: 0 auto 1rem;
+    margin: 0 auto; /* Center the avatar */
     border: 1rem solid var(--color-bg1);
 }
 
-.testimonial__info{
-    text-align: center;
+.avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the avatar image fits */
+    border-radius: 50%; /* Match the border's circular shape */
 }
 
-.testimonial__body{
+.testimonial h5 {
+    margin-top: 1rem; /* Space between avatar and name */
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-white);
+}
+
+.testimonial small {
+    display: block;
+    margin-top: 0.4rem; /* Space between name and role */
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-light); /* Subtle color for the role text */
+}
+
+.testimonial__body {
     position: relative;
     background: var(--color-primary);
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem; /* Ensure separation from avatar, name, and role */
+    border-radius: 1rem;
+    text-align: center; /* Center-align text */
 }
 
-.testimonial__body::before{
-    content:"";
-    display:block;
-    background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary), var(--color-primary));
+.testimonial__body::before {
+    content: "";
+    display: block;
     width: 3rem;
     height: 3rem;
     position: absolute;
     left: 50%;
     top: -1.5rem;
-    transform: rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary));
 }
+
 
 
 
