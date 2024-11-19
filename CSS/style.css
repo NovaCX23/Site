@@ -446,48 +446,49 @@ header {
 
 /* ================= TESTIMONIALS  ==================== */
 
-.testimonials__container{
+/* ================= TESTIMONIALS - UPDATED ==================== */
+
+.testimonials__container {
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
 }
 
-.testimonials{
+.testimonial {
     padding-top: 2rem;
 }
 
-.avatar{
+.avatar {
     width: 6rem;
     height: 6rem;
-    border-radius: 58%;
+    border-radius: 50%; 
     overflow: hidden;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1rem; 
     border: 1rem solid var(--color-bg1);
 }
 
 .testimonial__info{
-    text-align: center;
+    text-align:center;
 }
 
 .testimonial__body{
-    position: relative;
     background: var(--color-primary);
     padding: 2rem;
     margin-top: 3rem;
+    position:relative;
 }
 
 .testimonial__body::before{
     content:"";
-    display:block;
+    display: block;
     background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary), var(--color-primary));
     width: 3rem;
     height: 3rem;
     position: absolute;
-    left: 50%;
+    left:50%;
     top: -1.5rem;
     transform: rotate(45deg);
 }
-
 
 
 
