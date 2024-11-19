@@ -452,12 +452,16 @@ header {
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
+    display: grid; /* Use grid for better alignment and spacing */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 2rem; /* Add spacing between testimonials */
 }
 
 .testimonial {
     padding-top: 2rem;
 }
 
+.avatar {
 .avatar {
     width: 6rem;
     height: 6rem;
@@ -487,7 +491,8 @@ header {
     position: absolute;
     left:50%;
     top: -1.5rem;
-    transform: rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+    background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary));
 }
 
 
