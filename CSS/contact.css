@@ -94,9 +94,6 @@ input, textarea{
 /* ======================== TABLET ==========================*/
 
 @media screen and (max-width: 1024px){
-    /* .contact{
-         padding-bottom: 0;
-    } */
 
     .contact__container{
         gap: 1.5rem;
@@ -121,7 +118,8 @@ input, textarea{
 
 /* ======================== PHONE ==========================*/
 
-@media screen and(max-width: 600px){
+@media screen and (max-width: 600px){
+    
     .contact__container{
         grid-template-columns: 1fr;
         gap: 3rem;

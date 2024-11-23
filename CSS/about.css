@@ -61,7 +61,7 @@
 
 .team {
     background: var(--color-bg1);
-    box-shadow: insert 0 0 3rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
 }
 
 .team__container {
