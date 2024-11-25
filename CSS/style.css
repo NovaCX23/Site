@@ -9,17 +9,28 @@
 }
  
 :root {
-    --color-primary: #6c63ff;
-    --color-success: #00bf8e;
-    --color-warning: #f7c94b;
-    --color-danger: #f75842;
-    --color-danger-variant: rgba(247, 88, 66, 0.4);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.7);
-    --color-black: #000;
-    --color-bg: #1f2641;
-    --color-bg1: #2e3267;
-    --color-bg2: #424890;
+    /* Dark Backgrounds */
+    --color-bg: #212b35;
+    --color-bg1: #1b262f;
+    --color-bg2: #006f66;
+
+    /* Primary and Accent Colors */
+    --color-primary: #24534f;
+    --color-accent: #ff8f00;
+
+    /* Text Colors */
+    --color-text: #f0f0f0;
+    --color-light-text: #b0b0b0;
+
+    /* Alert Colors */
+    --color-success: #5cb85c; 
+    --color-warning: #ff9800;
+    --color-danger: #e53935; 
+
+    /* Utility Colors */
+    --color-black: #000000;
+    --color-white: #ffffff;
+    
     --container-width-lg: 80%;
     --container-width-md: 90%;
     --container-width-sm: 94%;
