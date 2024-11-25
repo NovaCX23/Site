@@ -9,23 +9,23 @@
 }
  
 :root {
-    /* Dark Backgrounds */
-    --color-bg: #212b35;
-    --color-bg1: #1b262f;
-    --color-bg2: #006f66;
-
-    /* Primary and Accent Colors */
-    --color-primary: #24534f;
-    --color-accent: #ff8f00;
-
-    /* Text Colors */
-    --color-text: #f0f0f0;
-    --color-light-text: #b0b0b0;
-
-    /* Alert Colors */
-    --color-success: #5cb85c; 
-    --color-warning: #ff9800;
-    --color-danger: #e53935; 
+     /* Dark Backgrounds */
+     --color-bg: #101e2d;
+     --color-bg1: #0c1923;
+     --color-bg2: #003d5b;
+ 
+     /* Primary and Accent Colors */
+     --color-primary: #002f45;
+     --color-accent: #b46f4b;
+ 
+     /* Text Colors */
+     --color-text: #e0e0e0;
+     --color-light-text: #a8a8a8;
+     
+     /* Alert Colors */
+     --color-success: #4caf50;
+     --color-warning: #ff9e1b;
+     --color-danger: #c62828;
 
     /* Utility Colors */
     --color-black: #000000;
