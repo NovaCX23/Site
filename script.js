@@ -35,22 +35,6 @@ const menu = document.querySelector(".nav__menu");
 const menuBtn = document.querySelector("#open-menu-btn");
 const closeBtn = document.querySelector("#close-menu-btn");
 
-// Selectăm elementul navbar
-const navbar = document.querySelector('nav');
-
-// Obținem stilurile calculate ale navbar-ului
-const computedStyles = window.getComputedStyle(navbar);
-
-// Verificăm dacă navbar-ul este vizibil (display = 'none')
-if (computedStyles.display === 'none' || computedStyles.visibility === 'hidden' || computedStyles.opacity === '0'){
-    console.log("Navbar-ul este ascuns");
-} else {
-    console.log("Navbar-ul este vizibil");
-}
-
-
-
-
 
 menuBtn.addEventListener('click', () => {
     menu.style.display = "flex";
@@ -66,12 +50,30 @@ const closeNav = () => {
 
 closeBtn.addEventListener('click', closeNav);
 
-// Pentru eficientizare asta n ar trebui sa fie prezenta
-// Modificarea pentru afișarea navbar-ului cu întârziere
+/// Selectează navbar-ul
+const navbar = document.querySelector('nav');
+// Obține stilurile calculate ale navbar-ului după ce este modificat
+const computedStyles = window.getComputedStyle(navbar);
+
+// Ascunde navbar-ul inițial
+navbar.style.display = 'none';
+// Verifică dacă navbar-ul este vizibil
+if (computedStyles.display === 'none' || computedStyles.visibility === 'hidden' || computedStyles.opacity === '0') {
+    console.log("Navbar-ul este ascuns");
+} else {
+    console.log("Navbar-ul este vizibil");
+}
+
+// Modifică stilul navbar-ului după 1 secundă
 setTimeout(() => {
-    const navbar = document.querySelector('nav');
-    navbar.style.display = 'block'; // Afișează navbar-ul cu tranziție
-}, 1000);  // Delay de 1 secundă
+    navbar.style.display = 'flex'; // Afișează navbar-ul cu tranziție
+    // Verifică dacă navbar-ul este vizibil
+    if (computedStyles.display === 'none' || computedStyles.visibility === 'hidden' || computedStyles.opacity === '0') {
+        console.log("Navbar-ul este ascuns");
+    } else {
+        console.log("Navbar-ul este vizibil");
+    }
+}, 1500);  // Delay de 1 secundă
 
 
     // TESTIMONIALS
