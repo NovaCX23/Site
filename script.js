@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="testimonial__body">
                 <p>"${message}"</p>
             </div>
-            <button class="delete-testimonial-btn">Șterge</button>
+            <button class="delete-testimonial-btn">Delete</button>
         `;
 
         // Adăugarea testimonialului în container
