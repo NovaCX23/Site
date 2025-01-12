@@ -10,6 +10,24 @@ window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
 });
 
+// navbar random color   // Can be eliminated to go back to originial color
+function changeNavbarColorToDarkBlue() {
+    const navbar = document.querySelector('nav');
+
+    // Generăm o culoare în nuanțe de albastru închis
+    const red = Math.floor(Math.random() * 100); // Valori mici pentru roșu
+    const green = Math.floor(Math.random() * 100); // Valori mici pentru verde
+    const blue = 150 + Math.floor(Math.random() * 105); // Dominant (150-255)
+    const randomColor = `rgb(${red}, ${green}, ${blue})`;
+
+    navbar.style.backgroundColor = randomColor;
+}
+
+// Schimbă culoarea navbar-ului la fiecare 10 secunde
+setInterval(changeNavbarColorToDarkBlue, 10000);
+
+// Up until here navbar random color change
+
 // Show/hide FAQ and toggle icon
 const faqs = document.querySelectorAll('.faq');
 
@@ -54,10 +72,13 @@ closeBtn.addEventListener('click', closeNav);
 setTimeout(() => {
     const navbar = document.querySelector('nav');
     navbar.style.display = 'block'; // Afișează navbar-ul cu tranziție
-}, 1000);  // Delai de 1 secundă
+}, 1000);  // Delay de 1 secundă
 
+
+    // TESTIMONIALS
 
 // Codul pentru gestionarea testimonialelor
+
 document.addEventListener("DOMContentLoaded", () => {
     // Elemente din formular
     const addTestimonialBtn = document.querySelector('#add-testimonial-btn');
@@ -125,9 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const role = roleInput.value.trim();
         const message = messageInput.value.trim();
 
+        // Expresii regulate pentru validare
+        const nameRegex = /^[a-zA-Z\s]{3,50}$/; // Nume între 3 și 50 de caractere
+        const roleRegex = /^[a-zA-Z\s]{2,30}$/; // Rol între 2 și 30 de caractere
+        const messageRegex = /^.{10,300}$/; // Mesaj între 10 și 300 de caractere
+
         // Verificare validare
-        if (!name || !role || !message) {
-            alert("Toate câmpurile sunt obligatorii!");
+        if (!nameRegex.test(name)) {
+            alert("The name must contain only letters and spaces, between 3 and 50 characters.");
+            return;
+        }
+
+        if (!roleRegex.test(role)) {
+            alert("The role must contain only letters and spaces, between 2 and 30 characters.");
+            return;
+        }
+
+        if (!messageRegex.test(message)) {
+            alert("The message must be between 10 and 300 characters.");
             return;
         }
 
