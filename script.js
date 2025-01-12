@@ -142,6 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listener pentru butonul de adăugare
     addTestimonialBtn.addEventListener('click', () => {
+        
+        // e.stopPropagation();  // Oprește propagarea evenimentului pentru click
+
         // Obține valorile introduse
         const name = nameInput.value.trim();
         const role = roleInput.value.trim();
