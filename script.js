@@ -49,6 +49,14 @@ const closeNav = () => {
 
 closeBtn.addEventListener('click', closeNav);
 
+// Pentru eficientizare asta n ar trebui sa fie prezenta
+// Modificarea pentru afișarea navbar-ului cu întârziere
+setTimeout(() => {
+    const navbar = document.querySelector('nav');
+    navbar.style.display = 'block'; // Afișează navbar-ul cu tranziție
+}, 1000);  // Delai de 1 secundă
+
+
 // Codul pentru gestionarea testimonialelor
 document.addEventListener("DOMContentLoaded", () => {
     // Elemente din formular

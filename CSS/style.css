@@ -120,7 +120,7 @@ img {
 }
 
 /* ======================= NAVBAR ==================== */
-
+/* Ascunde navbar-ul la început și aplica o tranziție */
 nav {
     background: transparent;
     width: 100vw;
@@ -128,12 +128,13 @@ nav {
     position: fixed;
     top: 0;
     z-index: 11;
+    display: none; /* Ascunde navbar-ul la început */ 
+    transition: all 0.5s ease; /* Animație de tranziție pentru afișare */
 }
 
-
-.window-scroll{
+.window-scroll {
     background: var(--color-primary);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2)
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .nav__container {
@@ -161,6 +162,7 @@ nav button {
 .nav__menu a:hover {
     color: var(--color-bg2);
 }
+
 
 
 /* ======================= END OF NAVBAR ==================== */
