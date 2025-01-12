@@ -434,7 +434,7 @@ header {
 /* ================= FORMULAR ADĂUGARE TESTIMONIAL ================= */
 
 .testimonial__form {
-    padding-top:6rem;
+    padding-top:7rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -452,7 +452,7 @@ header {
     border: 1px solid var(--color-bg1);
     border-radius: 0.5rem;
     background-color: var(--color-bg1);
-    color:var(--color-white);
+    color: var(--color-white);
     width: 100%;
     transition: all 0.3s ease;
 }
