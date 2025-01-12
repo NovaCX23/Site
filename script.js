@@ -28,30 +28,29 @@ setInterval(changeNavbarColorToDarkBlue, 10000);
 
 // Up until here navbar random color change
 
-// Show/hide FAQ and toggle icon
-const faqs = document.querySelectorAll('.faq');
-
-faqs.forEach(faq => {
-    faq.addEventListener('click', () => {
-        faq.classList.toggle('open');
-
-        // Change icon inside the event listener for each FAQ click
-        const icon = faq.querySelector('.faq__icon i');
-        if (icon.classList.contains('uil-plus')) {
-            icon.classList.remove('uil-plus');
-            icon.classList.add('uil-minus');
-        } else {
-            icon.classList.remove('uil-minus');
-            icon.classList.add('uil-plus');
-        }
-    });
-});
 
 
 // show/hide nav menu
 const menu = document.querySelector(".nav__menu");
 const menuBtn = document.querySelector("#open-menu-btn");
 const closeBtn = document.querySelector("#close-menu-btn");
+
+// Selectăm elementul navbar
+const navbar = document.querySelector('nav');
+
+// Obținem stilurile calculate ale navbar-ului
+const computedStyles = window.getComputedStyle(navbar);
+
+// Verificăm dacă navbar-ul este vizibil (display = 'none')
+if (computedStyles.display === 'none' || computedStyles.visibility === 'hidden' || computedStyles.opacity === '0'){
+    console.log("Navbar-ul este ascuns");
+} else {
+    console.log("Navbar-ul este vizibil");
+}
+
+
+
+
 
 menuBtn.addEventListener('click', () => {
     menu.style.display = "flex";
@@ -175,13 +174,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Adăugarea testimonialelor deja existente
-    const existingTestimonials = document.querySelectorAll('.testimonial');
-    existingTestimonials.forEach(testimonial => {
-        const avatarImg = testimonial.querySelector('.avatar img');
-        const avatarSrc = avatarImg ? avatarImg.src : '';
-        // Asigură-te că testimonialele existente nu sunt modificate
-        testimonial.querySelector('.delete-testimonial-btn').addEventListener('click', () => {
-            testimonial.remove();
-        });
+    // const existingTestimonials = document.querySelectorAll('.testimonial');
+    // existingTestimonials.forEach(testimonial => {
+    //     const avatarImg = testimonial.querySelector('.avatar img');
+    //     const avatarSrc = avatarImg ? avatarImg.src : '';
+    //     // Asigură-te că testimonialele existente nu sunt modificate
+    //     testimonial.querySelector('.delete-testimonial-btn').addEventListener('click', () => {
+    //         testimonial.remove();
+    //     });
+    // });
+});
+
+
+
+// Show/hide FAQ and toggle icon
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        faq.classList.toggle('open');
+
+        // Change icon inside the event listener for each FAQ click
+        const icon = faq.querySelector('.faq__icon i');
+        if (icon.classList.contains('uil-plus')) {
+            icon.classList.remove('uil-plus');
+            icon.classList.add('uil-minus');
+        } else {
+            icon.classList.remove('uil-minus');
+            icon.classList.add('uil-plus');
+        }
     });
 });
