@@ -431,9 +431,72 @@ header {
     transform: rotate(45deg);
 }
 
+/* ================= FORMULAR ADĂUGARE TESTIMONIAL ================= */
 
+.testimonial__form {
+    padding-top:6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial__form h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.testimonial__form input, .testimonial__form textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-bg1);
+    border-radius: 0.5rem;
+    background-color: var(--color-bg1);
+    color:var(--color-white);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.testimonial__form input:focus, .testimonial__form textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.testimonial__form button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial__form button:hover {
+    background-color: var(--color-bg1);
+}
+
+/* ================= BUTON DE ȘTERGERE TESTIMONIAL ================= */
+
+.delete-testimonial-btn {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.delete-testimonial-btn:hover {
+    background-color: darkred;
+}
 
 /* ================= END OF TESTIMONIALS  ==================== */
+
 
 /* ================= FOOTER  ==================== */
 
